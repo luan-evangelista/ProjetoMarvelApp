@@ -1,10 +1,45 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 export default function Home() {
  return (
-   <View>
-       <Text style={{marginTop: 60, fontSize: 25}}>Página Home</Text>
+   <View style={styles.container}>
+     <View style={styles.header}>
+       <Image
+        source={require('../../assets/banner.png')}
+        style={styles.image}
+       />
+
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>MARVEL</Text>
+        <Text style={[styles.text, { color: '#CECECF' } ]}>|</Text>
+        <Text style={[styles.text, { color: '#CECECF' } ]}>PERSONAGENS</Text>
+      </View>
+     </View>
    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    width: '100%',
+    backgroundColor: '#FFF'      
+  },
+  header:{
+    marginBottom: 8
+  },
+  image:{
+    width:'100%'
+  },
+  textContainer:{
+    flexDirection: 'row',
+    marginVertical: '5%',
+    marginHorizontal: '5%'
+  },
+  text:{
+    fontFamily: 'Anton_400Regular',
+    fontSize: 26,
+    marginHorizontal: '1%'
+  }
+});
