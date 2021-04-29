@@ -16,6 +16,9 @@ export default function Home() {
         <Text style={[styles.text, { color: '#CECECF' } ]}>PERSONAGENS</Text>
       </View>
      </View>
+
+      <View style={styles.line}/>
+  
    </View>
   );
 }
@@ -41,5 +44,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Anton_400Regular',
     fontSize: 26,
     marginHorizontal: '1%'
+  },
+  line:{
+    borderBottomColor: '#D8d8d8',
+    borderBottomWidth: 2,
   }
 });
