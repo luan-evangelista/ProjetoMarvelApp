@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { ScrollView, TextInput, Span } from 'react-native-gesture-handler';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 import Persona from '../../component/Persona';
 
@@ -21,6 +23,23 @@ export default function Home() {
       </View>
 
       <View style={styles.line} />
+
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={{ backgroundColor: '#FFF', }}
+      >
+
+        <View style={styles.search}>
+          <View style={styles.inputArea}>
+            <FontAwesome5 name="search" size={24} color="black" />
+            <TextInput
+              placeholder="Qual personagem está procurando?"
+              style={styles.input}
+            />
+          </View>
+        </View>
+
+      </ScrollView>
 
       <ScrollView>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
@@ -81,5 +100,30 @@ const styles = StyleSheet.create({
   line: {
     borderBottomColor: '#D8d8d8',
     borderBottomWidth: 2,
+  },
+  search: {
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    marginVertical: 20,
+  },
+  inputArea: {
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '98%',
+    backgroundColor: '#FFF',
+    elevation: 2,
+    paddingHorizontal: 10,
+    height: 37,
+    borderRadius: 10,
+  },
+  input: {
+    fontFamily: 'Inter_900Black',
+    paddingHorizontal: 10,
+    fontSize: 13,
+    width: '90%',
   }
 });

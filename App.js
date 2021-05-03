@@ -7,7 +7,7 @@ import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
 import Routes from './src/router';
 
-export default function App() { 
+export default function App() {
 
   let [fontsLoaded] = useFonts({
     Inter_900Black,
@@ -15,12 +15,12 @@ export default function App() {
 
   if (!fontsLoaded) {
     return <AppLoading />;
-  } else  {
+  } else {
     return (
       <>
         <StatusBar style="light" backgroundColor="#000" translucent={true} />
         <Routes />
       </>
-  );
+    );
   }
 };
