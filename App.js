@@ -2,25 +2,25 @@ import 'react-native-gesture-handler';
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { AppLoading } from 'expo';
-import { useFonts, Anton_400Regular } from '@expo-google-fonts/anton';
+import AppLoading from 'expo-app-loading';
+import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
 import Routes from './src/router';
 
-export default function App() {
+export default function App() { 
 
   let [fontsLoaded] = useFonts({
-    Anton_400Regular
+    Inter_900Black,
   });
 
-  /*if (!fontsLoaded){
+  if (!fontsLoaded) {
     return <AppLoading />;
-  } */
-
-  return (
-    <>
-      <StatusBar style="light" backgroundColor="#000" translucent={true} />
-      <Routes />
-    </>
+  } else  {
+    return (
+      <>
+        <StatusBar style="light" backgroundColor="#000" translucent={true} />
+        <Routes />
+      </>
   );
-}
+  }
+};

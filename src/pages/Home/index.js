@@ -1,51 +1,84 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
+
+import Persona from '../../component/Persona';
 
 export default function Home() {
- return (
-   <View style={styles.container}>
-     <View style={styles.header}>
-       <Image
-        source={require('../../assets/banner.png')}
-        style={styles.image}
-       />
 
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>MARVEL</Text>
-        <Text style={[styles.text, { color: '#CECECF' } ]}>|</Text>
-        <Text style={[styles.text, { color: '#CECECF' } ]}>PERSONAGENS</Text>
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Image
+          source={require('../../assets/banner.png')}
+          style={styles.image}
+        />
+
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>MARVEL</Text>
+          <Text style={[styles.text, { color: '#CECECF' }]}>|</Text>
+          <Text style={[styles.text, { color: '#CECECF' }]}>PERSONAGENS</Text>
+        </View>
       </View>
-     </View>
 
-      <View style={styles.line}/>
-  
-   </View>
+      <View style={styles.line} />
+
+      <ScrollView>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/1.png')}>
+            Iron Man
+          </Persona>
+          <Persona img={require('../../assets/1.png')}>
+            Iron Man
+          </Persona>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/1.png')}>
+            Iron Man
+          </Persona>
+          <Persona img={require('../../assets/1.png')}>
+            Iron Man
+          </Persona>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/1.png')}>
+            Iron Man
+          </Persona>
+          <Persona img={require('../../assets/1.png')}>
+            Iron Man
+          </Persona>
+        </View>
+      </ScrollView>
+
+    </View>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container:{
-    flex:1,
+  container: {
+    flex: 1,
     width: '100%',
-    backgroundColor: '#FFF'      
+    backgroundColor: '#FFF'
   },
-  header:{
+  header: {
     marginBottom: 8
   },
-  image:{
-    width:'100%'
+  image: {
+    width: '100%'
   },
-  textContainer:{
+  textContainer: {
     flexDirection: 'row',
     marginVertical: '5%',
     marginHorizontal: '5%'
   },
-  text:{
-    fontFamily: 'Anton_400Regular',
+  text: {
+    fontFamily: 'Inter_900Black',
     fontSize: 26,
     marginHorizontal: '1%'
   },
-  line:{
+  line: {
     borderBottomColor: '#D8d8d8',
     borderBottomWidth: 2,
   }
