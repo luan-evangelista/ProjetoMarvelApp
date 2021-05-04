@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { ScrollView, TextInput, Span } from 'react-native-gesture-handler';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 import Persona from '../../component/Persona';
 
 export default function Home() {
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -43,28 +45,28 @@ export default function Home() {
 
       <ScrollView>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-          <Persona img={require('../../assets/1.png')}>
+          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
             Iron Man
           </Persona>
-          <Persona img={require('../../assets/1.png')}>
-            Iron Man
-          </Persona>
-        </View>
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-          <Persona img={require('../../assets/1.png')}>
-            Iron Man
-          </Persona>
-          <Persona img={require('../../assets/1.png')}>
+          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
             Iron Man
           </Persona>
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-          <Persona img={require('../../assets/1.png')}>
+          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
             Iron Man
           </Persona>
-          <Persona img={require('../../assets/1.png')}>
+          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
+            Iron Man
+          </Persona>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
+            Iron Man
+          </Persona>
+          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
             Iron Man
           </Persona>
         </View>
