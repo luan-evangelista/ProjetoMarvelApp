@@ -7,6 +7,10 @@ import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 
 import Routes from './src/router';
 
+import './src/config/reactotron'
+
+console.tron.log('Teste');
+
 export default function App() {
 
   let [fontsLoaded] = useFonts({

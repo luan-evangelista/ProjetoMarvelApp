@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 export default function Persona(props) {
 
-    function filterDesc(desc) {
+    function filterDesc(desc) {    
         if (desc.length < 27) {
             return desc;
         }

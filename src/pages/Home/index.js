@@ -9,6 +9,8 @@ import Persona from '../../component/Persona';
 export default function Home() {
   const navigation = useNavigation();
 
+  console.tron.log('test');
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -26,7 +28,7 @@ export default function Home() {
 
       <View style={styles.line} />
 
-      <ScrollView
+      <View
         showsVerticalScrollIndicator={false}
         style={{ backgroundColor: '#FFF', }}
       >
@@ -41,33 +43,51 @@ export default function Home() {
           </View>
         </View>
 
-      </ScrollView>
+      </View>
 
       <ScrollView>
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
           <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
-            Iron Man
+            Homem de Ferro
           </Persona>
-          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
-            Iron Man
-          </Persona>
-        </View>
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
-            Iron Man
-          </Persona>
-          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
-            Iron Man
+          <Persona img={require('../../assets/2.png')} onClick={() => navigation.navigate('Detail')}>
+            Capitão América
           </Persona>
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
-            Iron Man
+          <Persona img={require('../../assets/3.png')} onClick={() => navigation.navigate('Detail')}>
+            Hulk
           </Persona>
-          <Persona img={require('../../assets/1.png')} onClick={() => navigation.navigate('Detail')}>
-            Iron Man
+          <Persona img={require('../../assets/4.png')} onClick={() => navigation.navigate('Detail')}>
+            Thor
+          </Persona>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/5.png')} onClick={() => navigation.navigate('Detail')}>
+            Pantera Negra
+          </Persona>
+          <Persona img={require('../../assets/6.png')} onClick={() => navigation.navigate('Detail')}>
+            Homem Formiga
+          </Persona>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/7.png')} onClick={() => navigation.navigate('Detail')}>
+            Viúva Negra
+          </Persona>
+          <Persona img={require('../../assets/8.png')} onClick={() => navigation.navigate('Detail')}>
+            Doutor Estranho
+          </Persona>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+          <Persona img={require('../../assets/9.png')} onClick={() => navigation.navigate('Detail')}>
+            Thanos
+          </Persona>
+          <Persona img={require('../../assets/10.png')} onClick={() => navigation.navigate('Detail')}>
+            Homem Aranha
           </Persona>
         </View>
       </ScrollView>
